@@ -25,7 +25,12 @@ SECRET_KEY = "django-insecure-o#)2w!^fk91-s!fs1itv(fzfc#&u2dww3i!w@800vu3e^ye-^n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "*",
+    "localhost",
+    "127.0.0.1",
+    "fitness-app-w-copilot-agent-mode-8000.app.github.dev"
+]
 
 
 # Application definition

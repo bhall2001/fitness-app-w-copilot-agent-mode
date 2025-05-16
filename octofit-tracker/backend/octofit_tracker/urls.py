@@ -30,12 +30,14 @@ router.register(r'workouts', views.WorkoutViewSet)
 
 @api_view(['GET'])
 def api_root(request, format=None):
+    # Use the Codespace URL for API endpoints
+    base_url = 'https://fitness-app-w-copilot-agent-mode-8000.app.github.dev/'
     return Response({
-        'users': request.build_absolute_uri('users/'),
-        'teams': request.build_absolute_uri('teams/'),
-        'activity': request.build_absolute_uri('activity/'),
-        'leaderboard': request.build_absolute_uri('leaderboard/'),
-        'workouts': request.build_absolute_uri('workouts/'),
+        'users': base_url + 'api/users/?format=api',
+        'teams': base_url + 'api/teams/?format=api',
+        'activities': base_url + 'api/activities/?format=api',
+        'leaderboard': base_url + 'api/leaderboard/?format=api',
+        'workouts': base_url + 'api/workouts/?format=api'
     })
 
 urlpatterns = [
