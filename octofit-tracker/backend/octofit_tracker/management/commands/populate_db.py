@@ -1,3 +1,5 @@
+# Copilot agent mode: Test data population script for octofit_db
+# This Django management command populates the MongoDB database with test data for users, teams, activities, leaderboard, and workouts.
 from django.core.management.base import BaseCommand
 from octofit_tracker.models import User, Team, Activity, Leaderboard, Workout
 from django.utils import timezone
